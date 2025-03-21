@@ -22,6 +22,25 @@ cml_lsb_utils is a Python package for astronomical image analysis, photometry, a
 - **PSF Scaling and Subtraction:**  
   Utilities to scale and subtract PSF light from stellar images.
 
+## Project Structure
+
+This repository contains:
+
+1. **Core package:** 
+  - **Script:** `cml_lsb_utils` usage and explanation explained below. 
+  
+Two additional directories containing scripts for specific analyses (****DISCLAIMER**: these two directories haven't been updated neither revised ins a few years now and they might contain comments in both English and Spanish):
+
+2. **ICL Analysis:**  
+   - **Directory:** `/ICL_LSST_Mock`  
+   - **Main Subfolder:** `/ICL_LSST_Mock/Codes_for_ICL_analysis`  
+   These scripts are designed to extract and analyze the Intra-Cluster Light (ICL) in LSST mock images of clusters of galaxies. The scripts are numerically prefixed (e.g., `1_Image_ready`) to indicate the recommended execution order.
+
+3. **IGL Analysis:**  
+   - **Directory:** `/IGL-HSC`  
+   This directory contains scripts for extracting and analyzing the Intra-Group Light (IGL) in groups of galaxies using HSC PDR2 images. There are folders for three different methods to extract the IGL; however, the fully completed and reviewed method from our research is the one based on the distance map (located in `/Method-DistancesMap`). The subfolders and scripts here are also numerically prefixed to suggest the proper execution sequence. 
+
+
 ## Contributors
 
 This project was developed years ago by myself and Felipe. It represents work we did during our research, and we do not plan to actively improve or maintain it. The code is provided as-is to help other astronomers and researchers with the tools we needed at that time.
