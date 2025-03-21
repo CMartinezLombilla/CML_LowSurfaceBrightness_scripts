@@ -84,7 +84,7 @@ Each function and class in this package includes detailed docstrings. Use Python
 
 ## Contributing
 
-Since this work was completed years ago by myself (Cristina Martinez-Lombilla) and Felipe Jimenez-Ibarra and is provided "as-is" without plans for future improvements, contributions are not expected. However, if you have suggestions or improvements that may benefit other researchers, feel free to fork the repository.
+Since this work was completed years ago by myself (Cristina Martinez-Lombilla) and [Felipe Jimenez-Ibarra](https://github.com/felipeji) and is provided "as-is" without plans for future improvements, contributions are not expected. However, if you have suggestions or improvements that may benefit other researchers, feel free to fork the repository.
 
 ## License
 
