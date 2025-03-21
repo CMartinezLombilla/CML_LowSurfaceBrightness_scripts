@@ -29,7 +29,7 @@ This repository contains:
 1. **Core package:** 
   - **Script:** `cml_lsb_utils` usage and explanation explained below. 
   
-Two additional directories containing scripts for specific analyses (****DISCLAIMER**: these two directories haven't been updated neither revised ins a few years now and they might contain comments in both English and Spanish):
+Two additional directories containing scripts for specific analyses (**DISCLAIMER**: these two directories haven't been updated neither revised ins a few years now and they might contain comments in both English and Spanish):
 
 2. **ICL Analysis:**  
    - **Directory:** `/ICL_LSST_Mock`  
