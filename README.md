@@ -27,9 +27,9 @@
 This repository contains:
 
 1. **Core package:** 
-  - **Script:** `cml_lsb_utils` usage and explanation explained below. 
+  - **Main script:** `cml_lsb_utils.py` usage and explanation explained below. 
   
-Two additional directories containing scripts for specific analyses (**DISCLAIMER**: these two directories haven't been updated neither revised ins a few years now and they might contain comments in both English and Spanish):
+Two additional directories containing scripts for specific analyses (**DISCLAIMER**: these two directories haven't been updated or revised since a few years now and they might contain comments in both English and Spanish):
 
 2. **ICL Analysis:**  
    - **Directory:** `/ICL_LSST_Mock`  
@@ -40,14 +40,6 @@ Two additional directories containing scripts for specific analyses (**DISCLAIME
    - **Directory:** `/IGL-HSC`  
    This directory contains scripts for extracting and analyzing the Intra-Group Light (IGL) in groups of galaxies using HSC PDR2 images. There are folders for three different methods to extract the IGL; however, the fully completed and reviewed method from our research is the one based on the distance map (located in `/Method-DistancesMap`). The subfolders and scripts here are also numerically prefixed to suggest the proper execution sequence. 
 
-
-## Contributors
-
-This project was developed years ago by myself and Felipe. It represents work we did during our research, and we do not plan to actively improve or maintain it. The code is provided as-is to help other astronomers and researchers with the tools we needed at that time.
-
-## Disclaimer
-
-This software is provided "as-is", without any warranty or guarantee of support. Use it at your own risk. We make no guarantees that the code is bug-free or suitable for your research purposes. The project is not actively maintained, and no further improvements will be made.
 
 ## Requirements
 
@@ -100,6 +92,10 @@ Refer to the inline documentation within the code for detailed explanations of p
 ## Documentation
 
 Each function and class in this package includes detailed docstrings. Use Python’s built-in `help()` function or consult the source code for more information.
+
+## Disclaimer
+
+This software is provided "as-is", without any warranty or guarantee of support. Use it at your own risk. We make no guarantees that the code is bug-free or suitable for your research purposes. The project is not actively maintained, and no further improvements will be made.
 
 ## Contributing
 
