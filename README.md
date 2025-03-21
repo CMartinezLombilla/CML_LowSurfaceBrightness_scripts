@@ -1,6 +1,6 @@
 # cml_lsb_utils
 
-cml_lsb_utils is a Python package for astronomical image analysis, photometry, and surface brightness profile extraction. It provides a variety of functions and classes to perform tasks such as converting counts to surface brightness, extracting radial profiles using different aperture geometries, fitting isophotes, interactively masking images, and converting between units.
+`cml_lsb_utils` is a Python package to help astronomers to **analyse low surface brightness images** of astronomical objects such as galaxies of groups of galaxies. The tools should be used to analyse outer galaxy features, galaxy discs, intra-group light (IGL), or intra-cluster light (ICL), as they allow the user to get photometry and extract different types of surface brightness profiles. `cml_lsb_utils` provides a variety of functions and classes to perform tasks such as converting counts to surface brightness, extracting radial profiles using different aperture geometries, fitting isophotes, interactively masking images, and converting between units.
 
 ## Features
 
