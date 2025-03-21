@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 
 
 #==============================================================================
-# Warning ignorados
+# Ignored warnings
 #==============================================================================
 import warnings
 warnings.filterwarnings("ignore")
