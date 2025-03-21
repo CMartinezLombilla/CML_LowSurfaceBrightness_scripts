@@ -1,0 +1,108 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fnil\fcharset0 LucidaGrande;
+\f3\fswiss\fcharset0 Helvetica-Oblique;\f4\fnil\fcharset0 HelveticaNeue;\f5\fnil\fcharset0 HelveticaNeue-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0\c85098;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid2\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid102\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13820\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+1. Correr los c\'f3digos 
+\f1\b 00_GroupMask.py
+\f0\b0  y 
+\f1\b 01_EditHSCMask.py
+\f0\b0 \
+\
+2. \cf2 \cb3 Genero los modelos en imfit sobre 
+\f1\b CoreMasked-band.fits
+\f0\b0 \
+\pard\tx220\tx720\tx1133\tx1700\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf4 \cb1 {\listtext	\uc0\u8226 	}\cf2 \cb3 Creo carpetas de cada 
+\f1\b banda/distMap
+\f0\b0 \
+\ls1\ilvl0\cf4 \cb1 {\listtext	\uc0\u8226 	}\cf2 \cb3 Copio los 2 archivos de configuraci\'f3n de otro grupo\
+\ls1\ilvl0\cf4 \cb1 {\listtext	\uc0\u8226 	}\cf2 \cb3 Pongo las funciones necesarias [en general Sersic para la galaxia + Exp para la IGL] con sus valores iniciales.\
+\pard\tx940\tx1440\tx1700\tx2267\tx2834\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls1\ilvl1\cf4 \cb1 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\cf2 \cb3 Tantas funciones como galaxias\
+\ls1\ilvl1\cf4 \cb1 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\cf2 \cb3 Valores iniciales los saco de los perfiles de BCG-sky y viendo los centros, intensidades, ell y PA en ds9 (usar una region elliptical y otra projection para guiarme)\
+\ls1\ilvl1\cf4 \cb1 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}\cf2 \cb3 Poner algunas condiciones de contorno (en intensidades y n sobre todo)\
+\pard\tx220\tx720\tx1133\tx1700\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf4 \cb1 {\listtext	\uc0\u8226 	}\cf2 \cb3 Editar comando de la terminal comentado en la parte de abajo del ConfigFile-band.txt para que me funcione ahora\
+\ls1\ilvl0\cf4 \cb1 {\listtext	\uc0\u8226 	}\cf2 \cb3 Abrir terminal -> voy al directorio del 
+\f1\b ConfigFile-band.txt 
+\f0\b0 y ejecuto el comando anterior (el que edito en el punto anterior)\
+\ls1\ilvl0\cf4 \cb1 {\listtext	\uc0\u8226 	}\cf2 \cb3 Cuando termina, genero la IGL corriendo solo las funciones que modelan las galaxias con los par\'e1metros del ajuste fijados (usar los resultados de best-fit-param.dat \'97guardar este .dat con otro nombre para que no se sobrescrita\'97  y ponerlos en 
+\f1\b ConfigFileSers-band.txt
+\f0\b0 ). Correr imfit ejecutando el mismo comando que antes convolucionando con la PSF pero para 
+\f1\b ConfigFileSers-band.txt 
+\f3\i\b0 (editar paths e im\'e1genes de salida)
+\f0\i0 \
+\pard\tx220\tx720\tx1133\tx1700\pardeftab720\li720\fi-720\partightenfactor0
+\cf4 \cb1 \
+	\'95	\cf2 \cb3 Generar imagen de las galaxias deconvolucionadas: 
+\f4 PSFdecMod + PSFconResid. 
+\f0 Corro de nuevo 
+\f1\b ConfigFileSers-band.txt 
+\f0\b0 pero
+\f1\b  SIN convolucionar con la PSF 
+\f3\i\b0 (editar paths e im\'e1genes de salida)
+\f0\i0 \
+\
+\pard\tx220\tx720\tx1133\tx1700\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 {\listtext	\uc0\u8226 	}Generar imagen con solo la BCG \
+\pard\tx940\tx1440\tx1700\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1\cf2 {\listtext	
+\f2 \uc0\u9702 
+\f0 	}Creo un archivo llamado 
+\f1\b BCGfrac-ConfigFile-band.txt 
+\f0\b0 que sera como ConfigFileSers-band.txt pero eliminando el bloque de funci\'f3n/nes que modelan la BCG. \
+{\listtext	
+\f2 \uc0\u9702 
+\f0 	}Corro imfit igual que para ConfigFileSers-band.txt pero cargando ahora 
+\f1\b BCGfrac-ConfigFile-band.txt y edito los nombres de las im\'e1genes del modelo y residuos a\'f1adiendo \'93BCGfrac-\'85.fits\'94. 
+\f0\b0 De este modo, genero una imagen con solo la BCG y las otras galaxias grandes centrales eliminadas 
+\f1\b BCGfrac-2DresPSF-band.fits\
+\pard\tx566\tx1133\tx1700\pardeftab720\partightenfactor0
+\cf2 \
+\pard\tx566\tx1133\tx1700\pardeftab720\partightenfactor0
+
+\f0\b0 \cf2 3. Correr el c\'f3digo 
+\f1\b 1_wcsCoords.py  \
+\
+\pard\tx566\tx1133\tx1700\pardeftab720\partightenfactor0
+
+\f4\b0 \cf2 4. \cf4 \cb1  \cf2 \cb3 Antes de seguir, genero las regiones que me cubren los residuos del modelo de las galaxias en la imagen de la IGL [
+\f5\b 2DresSersPSF-band.fits]
+\f4\b0  ->  
+\f5\b ResidualsSersicMask.reg\
+\
+
+\f4\b0 5. Guardo 
+\f5\b BCGfracMask.reg
+\f4\b0  cogiendo las regiones de ResidualsSersicMask.reg que no cubran la BCG\
+
+\f5\b \
+
+\f4\b0 6. Corro el c\'f3digo 
+\f5\b 2_ResidualMask.py\
+\
+
+\f4\b0 7. Corro el c\'f3digo 
+\f5\b 3_DeconvGroup.py 
+\f4\b0 que me genera la imagen completa del grupo enmascarado (todos los miembros desenmascarados) y con las galaxias del core deconvolucionadas (PSFdecMod + PSFconResid)
+\f5\b \
+\
+}
